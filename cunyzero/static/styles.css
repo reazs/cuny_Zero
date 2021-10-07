@@ -5,7 +5,7 @@ body{
 
 
 
-/* navbar design */
+                                                    /* navbar design */
 .brand-img{
     width: 80px;
     
@@ -21,6 +21,15 @@ nav{
    
 }
 
+.nav-link{
+ margin-left: 20px;
+ font-size: 1.2rem;
+ font-family: 'Merriweather', serif;
+}
+
+.login-btn{
+    margin-left: 20px;
+}
 
 /* top-section */
 .top-section{
@@ -52,7 +61,7 @@ nav{
 
 
 
-/* middle container */
+                                                     /* middle container */
 
 .middle-container{
     padding: 100px 0;
