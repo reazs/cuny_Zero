@@ -1,10 +1,12 @@
 from cunyzero import app
 from flask import  render_template
+import datetime as dt
 
+current_year = dt.datetime.now().year
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("index.html", year=current_year)
 
 
 @app.route("/login")
