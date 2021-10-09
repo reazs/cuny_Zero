@@ -67,3 +67,4 @@ class FiredInstructor(db.Model):
     email = db.Column(db.String, nullable=False)
     prof_id = db.Column(db.Integer, nullable=False, unique=True)
 
+

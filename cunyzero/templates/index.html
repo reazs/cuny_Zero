@@ -28,7 +28,15 @@
 
 {% block content %}
 {% include "navbar.html" %}
-
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
     <section class="top-section">
 
         <h1 class="welcome-title">Welcome To The<br>City College Of New York</h1>
