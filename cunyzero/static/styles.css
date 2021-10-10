@@ -33,7 +33,7 @@ nav{
 
 /* top-section */
 .top-section{
-    background-color: #916BBF;
+    background-color: #D076F7;
     padding: 100px 0;
 }
 
@@ -89,8 +89,8 @@ nav{
 }
 
 .btn-primary{
-    background-color: #916BBF;
-    border-color: #916BBF;
+    background-color: #D076F7;
+    border-color: #D076F7;
     width: 200px;
 }
 
@@ -118,6 +118,6 @@ nav{
 
 footer{
     padding: 100px 0;
-    background-color: #916BBF;
+    background-color: #D076F7;
     color: white;
 }
