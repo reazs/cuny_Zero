@@ -17,9 +17,7 @@ def login():
         print(request.form["email"])
         print(request.form["password"])
 
-
     return render_template("login.html")
-
 
 
 @app.route("/signup", methods=["POST","GET"])
