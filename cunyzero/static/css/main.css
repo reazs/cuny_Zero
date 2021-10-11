@@ -468,3 +468,16 @@ textarea{
   font-weight: bold;
   font-size: 1.2rem;
 }
+
+
+.btn-outline-primary{
+  border-color: #D076F7;
+  margin: 0 10px;
+  color: #D076F7;
+}
+
+.btn-outline-primary:hover{
+  
+  border-color: #D076F7;
+  background-color: #D076F7;
+}
