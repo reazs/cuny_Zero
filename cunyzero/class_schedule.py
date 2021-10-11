@@ -4,7 +4,7 @@ import datetime as dt
 day_of_week = dt.datetime.now().weekday()
 first_class_day = "Mon"
 second_class_day = "Wed"
-print(day_of_week)
+
 
 classes = [
 
