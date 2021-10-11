@@ -11,7 +11,7 @@ def home():
     for course in class_schedule.classes:
         print(course)
 
-    return render_template("index.html", year=current_year)
+    return render_template("index.html", year=current_year, courses=class_schedule.classes)
 
 
 @app.route("/login", methods=["POST", "GET"])

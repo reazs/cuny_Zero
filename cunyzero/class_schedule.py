@@ -15,6 +15,8 @@ classes = [
         "day_of_week": f"{first_class_day} {second_class_day}",
         "time": "10:00AM-11:30AM",
         "seat": "24/32",
+        "status": "open"
+
     },
     {
         "class_name": "CSc 22000",
@@ -23,6 +25,8 @@ classes = [
         "day_of_week": f"{first_class_day} {second_class_day}",
         "time": "2:00PM-3:45PM",
         "seat": "43/54",
+        "status": "open"
+
     },
     {
         "class_name": "CSc 30400",
@@ -30,7 +34,9 @@ classes = [
         "instructor": "staff",
         "day_of_week": f"{first_class_day} {second_class_day}",
         "time": "10:00AM-11:30AM",
-        "seat": "15/29"
+        "seat": "15/29",
+        "status": "open"
+
     },
     {
         "class_name": "CSc 30100",
@@ -38,7 +44,9 @@ classes = [
         "instructor": "staff",
         "day_of_week": f"Tus Thus",
         "time": "10:00AM-11:30AM",
-        "seat": "18/18"
+        "seat": "18/18",
+        "status": "close"
+
     },
     {
         "class_name": "Csc 11400",
@@ -47,6 +55,7 @@ classes = [
         "day_of_week": f"Fri",
         "time": "9:00AM-11:00Am",
         "seat": "28/35",
+        "status": "open"
     }
 
 ]
