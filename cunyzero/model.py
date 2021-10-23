@@ -1,20 +1,33 @@
-from cunyzero import db
+from cunyzero import db, login_manager
+from flask_login import UserMixin
 
-class StudentInfo(db.Model):
+
+# two function to login a User(Student and Instructor)
+@login_manager.user_loader
+def load_student(user_id):
+    return StudentInfo.query.get(int(user_id))
+
+@login_manager.user_loader
+def load_instructor(user_id):
+    return InstructorInfo.query.get(int(user_id))
+
+# Student model for the database
+class StudentInfo(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
-    emplid = db.Column(db.Integer, nullable=False)
+    #emplid = db.Column(db.Integer, nullable=False)
     f_name = db.Column(db.String, nullable=False)
     l_name = db.Column(db.String, nullable=False)
+    gpa = db.Column(db.Float, nullable=False)
     email = db.Column(db.String, nullable=False, unique=True)
     password = db.Column(db.String, nullable=False)
-    honorableStudents = db.Column(db.Boolean, nullable=False)
+    honors = db.Column(db.Boolean, nullable=False, default=False)
 
-class InstructorInfo(db.Model):
-
+# Instructor model for the database
+class InstructorInfo(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True, nullable=False)
     f_name = db.Column(db.String, nullable=False)
     l_name = db.Column(db.String, nullable=False)
-    prof_id = db.Column(db.Integer, nullable=False, unique=True)
+    #prof_id = db.Column(db.Integer, nullable=False, unique=True)
     email = db.Column(db.String, nullable=False, unique=True)
     password = db.Column(db.String, nullable=False)
 

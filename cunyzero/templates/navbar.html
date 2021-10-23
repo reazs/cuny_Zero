@@ -13,14 +13,19 @@
           <a class="nav-link " aria-current="page" href="{{url_for('home')}}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " aria-current="page" href="{{url_for('signup')}}">Register</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link " aria-current="page" href="#">Information</a>
         </li>
-        
-      </ul>
-      <a href="{{url_for('login')}}" class="btn btn-outline-dark login-btn">Login</a>
+        {% if current_user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="{{url_for('logout')}}">Logout</a>
+          </li>
+        {% else %}
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="{{url_for('signup')}}">Register</a>
+          </li>
+          </ul>
+          <a href="{{url_for('login')}}" class="btn btn-outline-dark login-btn">Login</a>
+        {% endif %}
     </div>
   </div>
 </nav>
